@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Home, Send, Archive, GraduationCap } from "lucide-react";
+import { Menu, Home, SquarePen } from "lucide-react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { UserButton, useUser } from "@clerk/clerk-react";
 import { ModeToggle } from "./ModeToggle";
@@ -10,13 +10,8 @@ import { ModeToggle } from "./ModeToggle";
 const cn = (...classes) => classes.filter(Boolean).join(" ");
 
 const navItems = [
-  { name: "Home", href: "/", icon: Home },
-  { name: "Chat", href: "/chat", icon: Send },
-  { name: "Forum", href: "/forum", icon: Archive },
-  { name: "Mentors", href: "/mentors", icon: Archive },
-  { name: "Roadmap", href: "/roadmap", icon: Archive },
-  { name: "Scholarships", href: "/scholarship", icon: GraduationCap },
-  { name: "ChatBot", href: "/chatbot", icon: Send },
+  { name: "Home", href: "/dashboard", icon: Home },
+  { name: "Create", href: "/create", icon: SquarePen },
 ];
 
 export default function Sidebar() {

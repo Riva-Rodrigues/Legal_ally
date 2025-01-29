@@ -4,6 +4,8 @@ import SignInPage from "./pages/SignIn";
 import SignUpPage from "./pages/SignUp";
 import LandingPage from "./pages/LandingPage";
 import OnboardingPage from "./pages/OnboardingPage";
+import Create from "./pages/Create";
+import CreateForm from "./pages/CreateForm";
 
 const App = () => {
     return (
@@ -17,6 +19,8 @@ const App = () => {
             {/* Private Nested Routes */}
             <Route path="/" element={<AppLayout />}>
                 <Route path="/dashboard" element={<div className="w-full">Dashboard</div>} />
+                <Route path="/create" element={<Create />} />
+                <Route path="/create/:category" element={<CreateForm />} />
             </Route>
         </Routes>
     );
