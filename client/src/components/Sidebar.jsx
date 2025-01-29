@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Home, SquarePen } from "lucide-react";
+import { Menu, Home, SquarePen, Newspaper } from "lucide-react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { UserButton, useUser } from "@clerk/clerk-react";
 import { ModeToggle } from "./ModeToggle";
@@ -11,6 +11,7 @@ const cn = (...classes) => classes.filter(Boolean).join(" ");
 
 const navItems = [
   { name: "Home", href: "/dashboard", icon: Home },
+  { name: "News", href: "/news", icon: Newspaper },
   { name: "Create", href: "/create", icon: SquarePen },
 ];
 
@@ -55,7 +56,7 @@ export default function Sidebar() {
   );
 
   return (
-    <div className="flex h-screen overflow-hidden bg-background text-foreground">
+    <div className="flex h-screen overflow-hidden bg-background text-foreground sticky top-0">
       {/* Sidebar for larger screens */}
       <aside className="w-64 flex-col border-r hidden lg:flex">
         <div className="flex h-14 items-center px-4">

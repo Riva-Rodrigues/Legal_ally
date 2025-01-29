@@ -7,8 +7,10 @@ from newspaper import Article
 import nltk
 import time
 import random
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Download required NLTK data for newspaper
 try:

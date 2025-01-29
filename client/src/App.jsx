@@ -6,6 +6,10 @@ import LandingPage from "./pages/LandingPage";
 import OnboardingPage from "./pages/OnboardingPage";
 import Create from "./pages/Create";
 import CreateForm from "./pages/CreateForm";
+import TextEditor from "./components/TextEditor";
+import News from "./pages/News";
+import Dashboard from "./pages/Dashboard";
+import DocView from "./pages/DocView";
 
 const App = () => {
     return (
@@ -18,9 +22,12 @@ const App = () => {
 
             {/* Private Nested Routes */}
             <Route path="/" element={<AppLayout />}>
-                <Route path="/dashboard" element={<div className="w-full">Dashboard</div>} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/dashboard/docview" element={<DocView />} />
                 <Route path="/create" element={<Create />} />
                 <Route path="/create/:category" element={<CreateForm />} />
+                <Route path="/create/:category/text-editor" element={<TextEditor />} />
+                <Route path="/news" element={<News />} />
             </Route>
         </Routes>
     );
