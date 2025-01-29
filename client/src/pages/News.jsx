@@ -148,7 +148,7 @@ export default function News() {
                         <CardContent>
                             <div className="aspect-w-16 aspect-h-9 mb-4">
                                 <img
-                                    src={"https://static.toiimg.com/thumb/msid-117671687,width-1070,height-580,imgsize-34186,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg" || "/placeholder.svg"}
+                                    src={`./${Math.floor(Math.random() * 5) + 1}.jpg`}
                                     alt={newsItem.title}
                                     className="object-cover rounded-lg"
                                 />
