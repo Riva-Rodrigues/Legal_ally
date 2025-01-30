@@ -10,6 +10,11 @@ import TextEditor from "./components/TextEditor";
 import News from "./pages/News";
 import Dashboard from "./pages/Dashboard";
 import DocView from "./pages/DocView";
+// import { R } from "@clerk/clerk-react/dist/useAuth-DT1ot2zi";
+import Compare from "./pages/CompareDocs";
+import Contracts from "./pages/Contracts";
+import LegalAnalysis from "./pages/LegalAnalysis";
+import TermsCondi from "./pages/TermsCondi";
 
 const App = () => {
     return (
@@ -28,6 +33,10 @@ const App = () => {
                 <Route path="/create/:category" element={<CreateForm />} />
                 <Route path="/create/:category/text-editor" element={<TextEditor />} />
                 <Route path="/news" element={<News />} />
+                <Route path="/compare" element={<Compare />} />
+                <Route path="/contracts" element={<Contracts />} />
+                <Route path="/testimony" element={<LegalAnalysis />} />
+                <Route path="/terms" element={<TermsCondi />} />
             </Route>
         </Routes>
     );

@@ -12,7 +12,11 @@ const cn = (...classes) => classes.filter(Boolean).join(" ");
 const navItems = [
   { name: "Home", href: "/dashboard", icon: Home },
   { name: "News", href: "/news", icon: Newspaper },
-  { name: "Create", href: "/create", icon: SquarePen },
+  { name: "Compare", href: "/compare", icon: SquarePen },
+  { name: "Create Document", href: "/create", icon: SquarePen },
+  { name: "Testimony Analysis", href: "/testimony", icon: SquarePen },
+  { name: "Contract Analysis", href: "/contracts", icon: SquarePen },
+  { name: "Terms & Condi", href: "/terms", icon: SquarePen },
 ];
 
 export default function Sidebar() {
@@ -61,7 +65,7 @@ export default function Sidebar() {
       <aside className="w-64 flex-col border-r hidden lg:flex">
         <div className="flex h-14 items-center px-4">
           <Link to="/" className="flex items-center font-semibold">
-            AspireEd
+            Legal Ally
           </Link>
         </div>
         <ScrollArea className="flex-1">
@@ -82,11 +86,11 @@ export default function Sidebar() {
             <SheetTitle>Navigation Menu</SheetTitle>
           </VisuallyHidden>
           <div id="navigation-menu-description" className="sr-only">
-            Navigation menu for mobile devices, containing links to various sections of AspireEd
+            Navigation menu for mobile devices, containing links to various sections of Legal Ally
           </div>
           <div className="flex h-14 items-center border-b">
             <Link to="/" className="flex items-center font-semibold">
-              AspireEd
+              Legal Ally
             </Link>
           </div>
           <ScrollArea className="flex-1">
