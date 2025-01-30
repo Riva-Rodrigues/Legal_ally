@@ -15,14 +15,16 @@ import Compare from "./pages/CompareDocs";
 import Contracts from "./pages/Contracts";
 import LegalAnalysis from "./pages/LegalAnalysis";
 import TermsCondi from "./pages/TermsCondi";
+import CustomDocument from "./pages/CustomDocument";
+import Landing from "./pages/Landing";
 
 const App = () => {
     return (
         <Routes>
             {/* Public Routes */}
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/sign-in" element={<SignInPage />} />
-            <Route path="/sign-up" element={<SignUpPage />} />
+            <Route path="/" element={<Landing />} />
+            <Route path="/signin" element={<SignInPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
             <Route path="/onboarding" element={<OnboardingPage />} />
 
             {/* Private Nested Routes */}
@@ -37,6 +39,8 @@ const App = () => {
                 <Route path="/contracts" element={<Contracts />} />
                 <Route path="/testimony" element={<LegalAnalysis />} />
                 <Route path="/terms" element={<TermsCondi />} />
+                <Route path="/custom-documents" element={<CustomDocument />} />
+                <Route path="*" element={<h1>Not Found</h1>} />
             </Route>
         </Routes>
     );

@@ -55,8 +55,6 @@ if uploaded_file is not None:
     try:
         # Extract text from the uploaded PDF
         pdf_text = extract_text_from_pdf(uploaded_file)
-        st.write("### PDF Content Extracted")
-        st.text_area("Extracted Text", pdf_text, height=300)
 
         if st.button("Analyze Document"):
             result = analyze_pdf_content(pdf_text)

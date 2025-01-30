@@ -152,10 +152,10 @@ When providing legal analysis or answering queries, do the following:
 5. If the user needs to explore similar cases or refer to legal precedents, offer summaries of related sections and guidelines."""
 
     # Display system documents being used
-    st.header("System Documents")
-    st.info("The following documents are being used for analysis:")
-    for doc_name in SYSTEM_DOCS.keys():
-        st.markdown(f"- {doc_name}")
+    # st.header("System Documents")
+    # st.info("The following documents are being used for analysis:")
+    # for doc_name in SYSTEM_DOCS.keys():
+    #     st.markdown(f"- {doc_name}")
 
     # Legal Scenario input
     st.header("Case Details")

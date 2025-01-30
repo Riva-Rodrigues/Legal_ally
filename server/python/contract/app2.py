@@ -91,7 +91,6 @@ def app():
     if uploaded_file is not None:
         st.write("File uploaded successfully!")
         contract_text = extract_text_from_pdf(uploaded_file)
-        st.write("Extracted Contract Text", contract_text)
         dom_chunks = [contract_text[i:i+2000] for i in range(0, len(contract_text), 2000)]
         
         # Parse clauses

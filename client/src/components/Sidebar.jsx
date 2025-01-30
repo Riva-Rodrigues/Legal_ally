@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Home, SquarePen, Newspaper } from "lucide-react";
+import { Menu, Home, SquarePen, Newspaper, Users, ReceiptText, GitCompareArrows, Handshake } from "lucide-react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { UserButton, useUser } from "@clerk/clerk-react";
 import { ModeToggle } from "./ModeToggle";
@@ -13,10 +13,10 @@ const navItems = [
   { name: "Home", href: "/dashboard", icon: Home },
   { name: "News", href: "/news", icon: Newspaper },
   { name: "Create Document", href: "/create", icon: SquarePen },
-  { name: "Testimony Analysis", href: "/testimony", icon: SquarePen },
-  { name: "Contract Analysis", href: "/contracts", icon: SquarePen },
-  { name: "Compare", href: "/compare", icon: SquarePen },
-  { name: "Terms & Condition", href: "/terms", icon: SquarePen },
+  { name: "Testimony Analysis", href: "/testimony", icon: Users },
+  { name: "Contract Analysis", href: "/contracts", icon: ReceiptText },
+  { name: "Compare", href: "/compare", icon: GitCompareArrows },
+  { name: "Terms & Condition", href: "/terms", icon: Handshake },
 ];
 
 export default function Sidebar() {
