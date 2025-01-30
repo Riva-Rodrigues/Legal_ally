@@ -12,11 +12,11 @@ const cn = (...classes) => classes.filter(Boolean).join(" ");
 const navItems = [
   { name: "Home", href: "/dashboard", icon: Home },
   { name: "News", href: "/news", icon: Newspaper },
-  { name: "Compare", href: "/compare", icon: SquarePen },
   { name: "Create Document", href: "/create", icon: SquarePen },
   { name: "Testimony Analysis", href: "/testimony", icon: SquarePen },
   { name: "Contract Analysis", href: "/contracts", icon: SquarePen },
-  { name: "Terms & Condi", href: "/terms", icon: SquarePen },
+  { name: "Compare", href: "/compare", icon: SquarePen },
+  { name: "Terms & Condition", href: "/terms", icon: SquarePen },
 ];
 
 export default function Sidebar() {
