@@ -140,7 +140,9 @@ def get_news():
             return jsonify({'error': 'keyword is required'}), 400
         
         # Process news articles
+        print(f"Fetching news for keyword: {keyword}")
         articles = process_news(keyword, min_results)
+        print(f"Total articles found: {len(articles)}")
         
         # Prepare response
         response = {
@@ -156,4 +158,4 @@ def get_news():
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=8000)

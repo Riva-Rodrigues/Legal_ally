@@ -22,6 +22,12 @@ export default function DocView() {
   const docViewerRef = useRef(null);
   const location = useLocation();
 
+  useEffect(() => {
+    console.log(location?.state?.summary, "Summary Here")
+
+    console.log(selectedText, "URL Here")
+  }, [selectedText])
+
   // Handle text selection and context menu
   useEffect(() => {
     const handleContextMenu = (e) => {
@@ -316,7 +322,7 @@ export default function DocView() {
 
         <ChatModal 
           isOpen={isOpen} 
-          contextText={selectedText || location.state.summary}
+          summary={selectedText || location.state.summary}
           setIsOpen={setIsOpen} 
         />
       </>
